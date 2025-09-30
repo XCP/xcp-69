@@ -1,0 +1,19 @@
+[package]
+name = "xcp69_setup"
+version = "0.6.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+base64 = "0.22"
+bitcoin = "0.31"
+clap = { version = "4", features = ["derive"] }
+hex = "0.4"
+miniscript = "11"
+rand = "0.8"
+rayon = "1.10"
+reqwest = { version = "0.12", features = ["blocking", "json", "rustls-tls"] }
+secp256k1 = { version = "0.28", features = ["rand", "global-context"] }   # ← no `bitcoin_hashes`
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
